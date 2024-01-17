@@ -1,5 +1,5 @@
 <script>
-
+export let data 
 </script>
 
 <section>
@@ -7,39 +7,58 @@
         <article>
             <h1>I love web</h1>
         </article>
-        <a href="src\routes\yolijn\+page.svelte">
+        {#each data.blogs as post}
+            <a href="/{post.slug}">
+                <h2>{post.blogTitle}</h2>
+                <p>{post.blogIntro}
+                </p>
+                <button>Lees meer</button>
+            </a>
+        {/each}
+        <!-- <a href="/yolijn">
             <h2>Yolijn van der Kolk</h2>
-            <p>Tijdens de les....</p>
+            <p>In deze we love web heeft Yolijn haar verhaal gedeeld
+                over het werken voor Nl Design Systems. Ze legt uit wat de werkzaamheden 
+                zijn en hoe ze hierbij ook met componenten werken. Deze componenten
+                gebruiken ze vaker voor verschillende organisaties. Tot slot legt ze uit
+                hoe zij met costum properties werken.
+            </p>
             <button>Lees meer</button>
         </a>
-        <a href="src\routes\shianta\+page.svelte">
+        <a href="/shianta">
             <h2>Shianta</h2>
             <p>Tijdens de les....</p>
             <button>Lees meer</button>
         </a>
-        <a href="src\routes\sanne\+page.svelte">
+        <a href="/sanne">
             <h2>Sanne</h2>
             <p>Tijdens de les....</p>
             <button>Lees meer</button>
-        </a>
-        <article>
-            <h1>Web quote, html is amazing en css ook</h1>
-        </article>
-        <a href="src\routes\symposium\+page.svelte">
+        </a> -->
+        <!-- <article>
+            <h1>“A user interface is like a joke. If you have to explain it, it’s not that good.”
+                – Unknown</h1>
+        </article> -->
+        <!-- <a href="/symposium">
             <h2>Symposium</h2>
             <p>Tijdens de les....</p>
             <button>Lees meer</button>
         </a>
-        <a href="src\routes\maikel\+page.svelte">
+        <a href="/maikel">
             <h2>Maikel</h2>
-            <p>Tijdens de les....</p>
+            <p>In deze tech stack talk heeft Maikel ons geinformeerd
+                over zijn werk bij Tribe. Hiernaast laat hij ons verschillende 
+                websites zien van festivals. Hij heeft hieraan meegeholpen.
+                Een grote klant was Mysteryland. Verder liet Maikel ons verschillen
+                zien van meerdere frameworks.
+            </p>
             <button>Lees meer</button>
         </a>
-        <a href="src\routes\julie\+page.svelte">
+        <a href="/julie">
             <h2>Julie</h2>
             <p>Tijdens de les....</p>
             <button>Lees meer</button>
-        </a>
+        </a> -->
 </main>
 </section>
 
@@ -64,7 +83,7 @@ section {
 main {
     display: grid;
     gap: 1em;
-    grid-template-columns:repeat(auto-fit, minmax(16em, 1fr));
+    grid-template-columns:repeat(auto-fit, minmax(20em, 1fr));
 }
 
 h1 {
@@ -89,11 +108,12 @@ a {
 h2 {
     font-family: var(--main-font);
     color: var(--dark-pink);
+    margin-bottom: 0.5em;
 }
 
 p {
     font-family: var(--main-font);
-    color: var(--lightlight-pink);
+    color: var(--dark-pink);
 }
 
 article {

@@ -15,7 +15,7 @@
               <li><a href="src\routes\julie\+page.svelte">Julie</a></li>
             </ul>
           </li>
-          <li><a href="src\routes\info\+page.svelte">Info</a></li>
+          <li><a href="/info">Info</a></li>
         </ul>
       </nav>      
 </section>
