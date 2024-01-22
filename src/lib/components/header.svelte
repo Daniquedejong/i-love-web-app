@@ -23,11 +23,12 @@
 <style>
     :root {
 /*COLORS*/
-   --lightlight-pink: #fee4fe;
-   --light-pink: #ffcaed;     
-   --mid-pink: #f1a7d8;
-   --mid-dark-pink: rgb(255, 117, 207);
-   --dark-pink: #dc1a9b;
+   --beige: #e6e6de;
+   --dark-beige: #cbcbc2;
+   --darker-beige: #bebeb3;
+   --white: #f8f8f8;     
+   --black: #000000;
+   --font: #f4f4f4;
 /*FONT*/
    --main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    --h1-size: 4rem;
@@ -46,13 +47,17 @@ nav {
   font-family: var(--main-font);
   justify-content: right;
   display: flex;
-  background-color: var(--lightlight-pink);
+  background-color: var(--beige);
   padding-bottom: 2em;
   font-size: 1.2rem;
 }
 
+.dropdown {
+  background-color: var(--dark-beige);
+}
+
 ul {
-  background: var(--mid-dark-pink);
+  background: var(--dark-beige);
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -60,7 +65,7 @@ ul {
 }
 
 li {
-  color: #fff;
+  color: var(--black) ;
   /* background: var(--mid-dark-pink); */
   display: block;
   float: left;
@@ -76,7 +81,7 @@ li a {
 
 li:hover,
 li:focus-within {
-  background: var(--dark-pink);
+  background: var(--darker-beige);
   border-radius: 0.5em;
   cursor: pointer;
 }
