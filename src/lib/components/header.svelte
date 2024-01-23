@@ -3,9 +3,9 @@
 </script>
 
 <section> 
-    <nav role="navigation">
+    <nav>
         <ul>
-          <li><a href="#" aria-haspopup="true">I love web</a>
+          <li><a href="/" aria-haspopup="true">I love web</a>
             <ul class="dropdown" aria-label="submenu">
               <li><a href="src\routes\yolijn\+page.svelte">Yolijn</a></li>
               <li><a href="src\routes\shianta\+page.svelte">Shianta</a></li>
@@ -25,7 +25,7 @@
 /*COLORS*/
    --beige: #e6e6de;
    --dark-beige: #cbcbc2;
-   --darker-beige: #bebeb3;
+   --darker-beige: #cecec4;
    --white: #f8f8f8;     
    --black: #000000;
    --font: #f4f4f4;
@@ -66,7 +66,6 @@ ul {
 
 li {
   color: var(--black) ;
-  /* background: var(--mid-dark-pink); */
   display: block;
   float: left;
   padding: 1rem;
@@ -91,7 +90,6 @@ li:focus-within a {
 }
 
 ul li ul {
-  /* background: var(--mid-pink); */
   visibility: hidden;
   opacity: 0;
   min-width: 5rem;

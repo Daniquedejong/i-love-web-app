@@ -1,21 +1,64 @@
 <script>
-export let data 
+export let data;
+
+// Controleer of de code wordt uitgevoerd in een browseromgeving
+if (typeof window !== 'undefined') {
+    // Voeg een 'onscroll' eventlistener toe aan het 'window' object
+    window.onscroll = function () {
+        // Controleer of de vensterbreedte groter is dan of gelijk is aan 1096 pixels (68em)
+        if (window.innerWidth >= 1096) {
+            // Roep de scrollFunction aan als het vensterbreedte-criterium is voldaan
+            scrollFunction();
+        }
+    };
+}
+
+// Functie om de lettergrootte aan te passen op basis van de scrollpositie
+function scrollFunction() {
+    // Controleer of de scrollpositie van het document meer dan 50 pixels vanaf de bovenkant is
+    // OF als de scrollpositie van het document meer dan 50 pixels vanaf de bovenkant van het HTML-element is
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        // Verander de lettergrootte van het element met het id "h1" naar 50 pixels
+        document.getElementById("h1").style.fontSize = "50px";
+    } else {
+        // Als de voorwaarde niet is voldaan, verander de lettergrootte naar 150 pixels
+        document.getElementById("h1").style.fontSize = "150px";
+    }
+}
+
 </script>
 
 <section>
     <main>
         <article>
-            <h1>I love web</h1>
+            <h1 id="h1">I love web</h1>
+            <p class="intro">Op de Frontend Design & Development opleiding leren 
+                we van alles. We leren frontend code schrijven, web 
+                design en nieuwe ontwikkelingen in het vakgebied. Dit 
+                laatste puntje ga ik het over hebben. <br><br>
+
+                Zo nu en dan krijgen we een We Love Web les op school. 
+                In zo'n les komt er altijd een andere gastspreker die 
+                iets te maken heeft met frontend code en alles wat er 
+                omheen hangt. Er komen mensen langs die het over web 
+                toegankelijkheid hebben, maar ook oud studenten van de 
+                CMD opleiding. Zo is er voor ieder wat wils! <br><br>
+                
+                In dit blog hou ik elke We Love Web sessie bij en probeer
+                 ik uit te leggen waar elke spreker het over heeft gehad. 
+                 Enjoy!</p>
         </article>
+        <!-- {#each data.intros as intros}
+        <p>{intros.intro}</p> -->
+
         {#each data.blogs as post}
             <a href="/{post.slug}">
                 <h2>{post.blogTitle}</h2>
-                <p>{post.blogIntro}
-                </p>
+                <p>{post.blogIntro}</p>
                 <button>Lees meer</button>
             </a>
         {/each}
-</main>
+    </main>
 </section>
 
 <style>
@@ -51,6 +94,12 @@ h1 {
     font-size: var(--h1-size);
     justify-content: center;
     display: flex;
+    text-transform: uppercase;
+}
+
+.intro {
+    margin-top: 8em;
+    width: 100%;
 }
 
 a {
@@ -102,4 +151,37 @@ button {
 button:hover {
     color: var(--dark-beige);
 }
+
+ /* TABLET */
+ @media (min-width: 35em) {
+.intro {
+    width: 100%;
+}
+ }
+
+ /* DESKTOP */
+ @media (min-width: 68em) {
+h1 {
+    background-color: var(--beige);
+    position: sticky;
+    display: flex;
+    top: 0rem;
+    height: 100px;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.8s;
+    font-size: 90px;
+}
+
+article {
+    min-height: 80vh;
+}
+
+.intro {
+    margin-top: 10em;
+    width: 80%;
+    margin-left: 10em;
+}
+ }
+
 </style>

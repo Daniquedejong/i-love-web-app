@@ -10,18 +10,18 @@ console.log(data);
   <title>{data.blogPost.blogTitle}</title>
   </svelte:head>
    
-<section>
-
 <Header />
+
+<section>
 
   <main class="detailPage">
     <h1>{data.blogPost.blogTitle}</h1>
-    {@html data.blogPost.blogInfo.html}
+    <p>{@html data.blogPost.blogInfo.html}</p>
   </main>
 
-<Footer />
-
 </section>
+
+<Footer />
 
 <style>
 :root {
@@ -47,4 +47,22 @@ main {
   padding-left: 2em;
   padding-right: 2em;
 }
+
+h1 {
+  color: var(--black);
+  font-family: var(--main-font);
+}
+
+.detailPage p {
+  color: var(--black);
+  font-family: var(--main-font);
+}
+
+ /* MOBILE */
+ @media (max-width: 500px) {
+
+.detailPage p {
+  
+}
+ }
 </style>
