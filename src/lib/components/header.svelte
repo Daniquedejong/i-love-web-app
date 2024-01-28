@@ -25,7 +25,7 @@
 /*COLORS*/
    --beige: #e6e6de;
    --dark-beige: #cbcbc2;
-   --darker-beige: #cecec4;
+   --darker-beige: #c2c2b8;
    --white: #f8f8f8;     
    --black: #000000;
    --font: #f4f4f4;
