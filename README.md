@@ -1,5 +1,5 @@
 
-# Visual Thinking
+# I love web
 <img src='https://github.com/Daniquedejong/i-love-web-app/assets/112856683/d4906b17-5f60-4e3c-8efc-bfef2681de57' width=50%>
 
 ## 📚 Inhoudsopgave
