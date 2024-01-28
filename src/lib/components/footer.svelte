@@ -5,23 +5,23 @@
 <section>
 <footer>
     <article>
-        <img src="/instagram.svg" alt="icon-instagram">
+        <img src="/instagram.svg" alt="icon-instagram" width="100" height="40">
         <h1>Daniiquedejong</h1>
     </article>
     <article>
-        <img src="/social-facebook.svg" alt="icon-facebook">
+        <img src="/social-facebook.svg" alt="icon-facebook" width="100" height="40">
         <h1>Danique de Jong</h1>
     </article>
     <article>
-        <img src="/github-square.svg" alt="icon-github">
+        <img src="/github-square.svg" alt="icon-github" width="100" height="40">
         <h1>Danique de Jong</h1>
     </article>
     <article>
-        <img src="/linkedin.svg" alt="icon-linkedin">
+        <img src="/linkedin.svg" alt="icon-linkedin" width="100" height="40">
         <h1>Danique de Jong</h1>
     </article>
     <article>
-        <img src="/e-mail.svg" alt="icon-email">
+        <img src="/e-mail.svg" alt="icon-email" width="100" height="60">
         <h1>Daniquedejong20<br>@hotmail.com</h1>
     </article>
     <article>
