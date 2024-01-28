@@ -75,7 +75,7 @@ li {
 }
   
 li a {
-  color: #fff;
+  color: var(--black);
 }
 
 li:hover,
